@@ -1,7 +1,3 @@
-//
-// Created by Demien on 08/05/2022.
-//
-
 #include <stdio.h>
 #include <stdbool.h>
 #define N 15
@@ -26,9 +22,7 @@ int verifica(int n){
 }
 
 int restituisci(int i, int arr[]){
-    int *p;
-    p = arr;
-    if(p[i]){
+    if(arr[i]){
         return arr[i];
     }else{
         return 0;
@@ -43,13 +37,9 @@ int somma(int arr[], int len){
     return risultato;
 }
 
-int sonoUguali(int arr1[], int arr2[]){
-    int *p1, *p2, i;
-    p1 = arr1;
-    p2 = arr2;
-    int n = sizeof(p1);
-    for(i=0; i<=n; i++){
-        if(p1[i] == p2[i]){
+int sonoUguali(int arr1[], int arr2[], int len){
+    for(int i=0; i<=len; i++){
+        if(arr1[i] == arr2[i]){
             continue;
         } else {
             return false;
@@ -83,8 +73,8 @@ int main() {
 
     printf("-------------------------\n");
 
-    int arrey[] = {3, 8, 2, 15, 5, 39, 75, 69, 21, 110};
-    printf("I 2 array sono uguali?\n%d\n", sonoUguali(arr, arrey));
+    int array[] = {3, 8, 2, 15, 5, 39, 75, 69, 21, 110};
+    printf("I 2 array sono uguali?\n%d\n", sonoUguali(arr, array, LENGHT(arr)));
 
     return 0;
 }
