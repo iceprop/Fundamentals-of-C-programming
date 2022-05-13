@@ -3,15 +3,7 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include <stdbool.h>
-
-void map(int (fun) (int, int), int X[], int Y[], int Z[]) {
-    int i;
-    for (i=0; i<5; i++) {
-        Z[i] = fun(X[i], Y[i]);
-    }
-}
 
 int somma(int a, int b) {
     return(a+b);
@@ -85,7 +77,7 @@ int main(int argc, char **argv) { // argc contiene il numero di stringhe inserit
             printf("Inserisci il secondo numero:");
             scanf("%d", &b);
             printf("Inserisci l'operatore:");
-            scanf(" %c", &operator);
+            scanf("%c", &operator);
             switch (operator) {
                 case '+':
                     ptrFun = somma;
