@@ -37,8 +37,11 @@ int somma(int arr[], int len){
     return risultato;
 }
 
-int sonoUguali(int arr1[], int arr2[], int len){
-    for(int i=0; i<=len; i++){
+int sonoUguali(int arr1[], int arr2[], int len1, int len2){
+    if(len1 != len2){
+        return false;
+    }
+    for(int i=0; i<len1; i++){
         if(arr1[i] == arr2[i]){
             continue;
         } else {
@@ -74,7 +77,7 @@ int main() {
     printf("-------------------------\n");
 
     int array[] = {3, 8, 2, 15, 5, 39, 75, 69, 21, 110};
-    printf("I 2 array sono uguali?\n%d\n", sonoUguali(arr, array, LENGHT(arr)));
+    printf("I 2 array sono uguali?\n%d\n", sonoUguali(arr, array, LENGHT(arr), LENGHT(array));
 
     return 0;
 }
